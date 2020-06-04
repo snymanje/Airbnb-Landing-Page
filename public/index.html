@@ -1,140 +1,315 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="stylesheet" href="/build/tailwind.css">
-  <title>Welcome to Tailwind!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="stylesheet" href="/build/tailwind.css" />
+    <title>Airbnb Clone With Tailwindcss</title>
 </head>
-<body class="antialiased">
-  <div class="relative bg-gray-200">
-    <div class="absolute inset-0 flex flex-col" aria-hidden="true">
-      <div class="flex-1 bg-gray-100"></div>
-      <div class="flex-1 bg-gray-200"></div>
-      <div class="bg-repeat-x bg-center absolute inset-0" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='1440' height='190' viewBox='0 0 1440 190' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23F7FAFC' d='M1440 0H0v190h1440V0z'/%3E%3Cpath fill='%23EDF2F7' d='M1440 95s-202.82 45-360 45c-157.183 0-360-45-360-45S517.182 50 360 50C202.817 50 0 95 0 95v95h1440V95z'/%3E%3Cpath fill='%23E2E8F0' d='M1440 93.907l-.26.113-.11.05-.03.012v.003s-.01 0 .04.098c.05.108.15.336.36.817l-.41-.913v.003l-.03.012-.11.048-.44.192-.31.136c-.17.077-.38.165-.6.264l-.81.35a754.49 754.49 0 0 1-6.7 2.853c-5.85 2.459-14.38 5.971-25.1 10.187a1440.735 1440.735 0 0 1-86.85 30.916C1248.31 161.539 1158.43 184 1080 184c-78.43 0-168.315-22.461-238.64-44.952a1439.162 1439.162 0 0 1-86.849-30.916 1157.701 1157.701 0 0 1-25.102-10.187 707.198 707.198 0 0 1-7.745-3.307l-.472-.206-.204-.09-.437-.192-.11-.048-.027-.012-.007-.003s-.002-.001-.363.812l.274-.617c.086-.196.085-.197.085-.197l-.008-.003-.028-.013-.112-.05-.441-.193c-.39-.171-.97-.424-1.734-.755a717.813 717.813 0 0 0-6.715-2.86 1159.897 1159.897 0 0 0-25.146-10.204 1439.927 1439.927 0 0 0-86.971-30.96C528.868 26.54 438.749 4 359.999 4 281.25 4 191.131 26.539 120.751 49.047a1440.116 1440.116 0 0 0-86.971 30.96A1160.572 1160.572 0 0 0 8.634 90.21c-2.93 1.232-5.189 2.2-6.716 2.86-.763.33-1.343.584-1.733.755L0 93.907v2.186l.255-.113.147-.065S.405 95.914 0 95l.345.777c.06.137.062.136.062.136l.007-.003.137-.06.436-.192a717.078 717.078 0 0 1 8.421-3.603c5.847-2.459 14.376-5.971 25.103-10.187a1438.178 1438.178 0 0 1 86.849-30.915C191.685 28.46 281.566 6 359.999 6c78.434 0 168.315 22.461 238.639 44.953a1438.284 1438.284 0 0 1 86.85 30.915 1158.411 1158.411 0 0 1 25.102 10.187 707.198 707.198 0 0 1 8.421 3.603l.437.192.11.048.027.012.007.003s.002.001.408-.913l-.324.73c-.081.184-.08.185-.08.185l.008.003.028.013.112.05.441.193.303.133a241.676 241.676 0 0 0 1.431.622c1.526.66 3.785 1.628 6.715 2.86a1159.053 1159.053 0 0 0 25.146 10.204 1438.983 1438.983 0 0 0 86.971 30.959C911.131 163.461 1001.25 186 1080 186s168.87-22.539 239.25-45.048a1440.417 1440.417 0 0 0 86.97-30.959c10.74-4.222 19.29-7.74 25.15-10.204 2.92-1.232 5.18-2.2 6.71-2.86l.83-.36c.37-.16.67-.292.9-.395l.19-.081v-2.186z'/%3E%3Cpath fill='%23E2E8F0' d='M1440 93.976l-.21.046-.01.001.16.72-.1-.478-.03-.123c-.02-.068-.02-.096-.03-.109v-.009l-.01.002-.02.006-.55.12-1.73.376c-1.52.33-3.77.812-6.7 1.427-5.85 1.23-14.38 2.987-25.11 5.095-21.46 4.217-51.71 9.84-86.88 15.463C1248.45 127.76 1158.51 139 1080 139c-78.51 0-168.453-11.24-238.787-22.487a2518.4 2518.4 0 0 1-86.876-15.463 1959.635 1959.635 0 0 1-25.111-5.095 1199.575 1199.575 0 0 1-8.427-1.803l-.548-.12-.027-.006-.007-.002s-.002 0-.218.976c.216-.976.214-.977.214-.977l-.007-.001-.58-.128c-.389-.085-.969-.212-1.732-.377-1.526-.33-3.783-.814-6.712-1.43a1956.48 1956.48 0 0 0-25.137-5.1A2520.12 2520.12 0 0 0 599.1 71.513C528.73 60.26 438.669 49 359.999 49c-78.671 0-168.732 11.26-239.102 22.513a2520.176 2520.176 0 0 0-86.945 15.474 1960.39 1960.39 0 0 0-25.137 5.1A1190.033 1190.033 0 0 0 .37 93.895L0 93.976v2.048l.067-.015.14-.03.007-.002-.026-.123L0 95.002c.216.974.218.974.218.974l.144-.032.438-.096 1.727-.376c1.522-.33 3.776-.812 6.7-1.427 5.849-1.23 14.381-2.987 25.111-5.095a2517.66 2517.66 0 0 1 86.876-15.463C191.547 62.24 281.486 51 359.999 51c78.512 0 168.451 11.24 238.785 22.487A2518.293 2518.293 0 0 1 685.66 88.95a1959.635 1959.635 0 0 1 25.111 5.095 1199.575 1199.575 0 0 1 8.427 1.803l.548.12.027.006.007.002s.002 0 .2-.893l-.159.718c-.038.175-.037.176-.037.176l.008.001.579.128c.389.085.969.212 1.732.377 1.526.33 3.783.814 6.712 1.43a1952.92 1952.92 0 0 0 25.137 5.099 2518.171 2518.171 0 0 0 86.945 15.475C911.267 129.74 1001.33 141 1080 141c78.67 0 168.73-11.26 239.1-22.513a2519.232 2519.232 0 0 0 86.95-15.475c10.73-2.11 19.28-3.868 25.13-5.1a1059.51 1059.51 0 0 0 8.45-1.806l.37-.082v-2.048z'/%3E%3Cpath fill='%23E2E8F0' fill-rule='evenodd' clip-rule='evenodd' d='M0 96.006l.107-.012c.002 0 .002 0-.107-.992.11.992.11.992.112.992l2.31-.252c1.524-.165 3.778-.407 6.704-.714 5.85-.615 14.385-1.494 25.117-2.548a4862.202 4862.202 0 0 1 86.892-7.733C191.478 79.123 281.447 73.5 359.999 73.5c78.552 0 168.521 5.623 238.864 11.247a4861.657 4861.657 0 0 1 86.892 7.733 3742.387 3742.387 0 0 1 25.118 2.548 2286.348 2286.348 0 0 1 8.431.901l.583.065c.001 0 .002 0 .112-.994-.11.994-.109.994-.108.994h.007l2.31.253c1.525.165 3.781.407 6.709.714 5.854.616 14.393 1.495 25.131 2.55a4859.339 4859.339 0 0 0 86.928 7.736C911.337 112.873 1001.37 118.5 1080 118.5s168.66-5.627 239.02-11.253c35.19-2.813 65.46-5.626 86.93-7.736 10.74-1.055 19.28-1.934 25.13-2.55a2033.552 2033.552 0 0 0 8.44-.902l.48-.053v-2.012l-.1.011h-.01l.11.995-.09-.77-.02-.224-2.31.252c-1.53.165-3.78.407-6.71.714-5.85.615-14.38 1.494-25.11 2.548-21.47 2.11-51.73 4.921-86.9 7.733-70.34 5.624-160.31 11.247-238.86 11.247-78.55 0-168.522-5.623-238.865-11.247a4862.892 4862.892 0 0 1-86.892-7.733 3742.387 3742.387 0 0 1-25.118-2.548 2277.852 2277.852 0 0 1-8.43-.901l-.583-.065c-.002 0-.002 0-.113.994.111-.994.11-.994.108-.994h-.007l-.579-.065-1.73-.188c-1.525-.165-3.781-.407-6.709-.714a3745.292 3745.292 0 0 0-25.131-2.55 4864.24 4864.24 0 0 0-86.928-7.736C528.661 77.127 438.63 71.5 359.999 71.5s-168.662 5.627-239.023 11.253a4863.999 4863.999 0 0 0-86.928 7.736 3742.04 3742.04 0 0 0-25.132 2.55 2268.477 2268.477 0 0 0-8.44.902L0 93.994v2.012z'/%3E%3Cpath fill='%234FD1C5' d='M1440 93.947l-.17.055-.11.037-.03.009v.002s-.01.001.31.95l-.32-.948-.01.002-.13.046-.44.144-.61.2a873.156 873.156 0 0 1-7.81 2.503c-5.85 1.844-14.38 4.479-25.11 7.641a1777.105 1777.105 0 0 1-86.86 23.19C1248.38 144.647 1158.47 161.5 1080 161.5s-168.383-16.853-238.711-33.722a1777.81 1777.81 0 0 1-86.861-23.19 1402.035 1402.035 0 0 1-25.106-7.641 870.248 870.248 0 0 1-8.424-2.703l-.437-.144-.137-.046-.007-.002L720 95c.315-.949.313-.95.313-.95l-.007-.002-.029-.01-.111-.036-.441-.146-.55-.18-1.183-.385a862.55 862.55 0 0 0-6.713-2.145 1407.05 1407.05 0 0 0-25.143-7.652 1778.897 1778.897 0 0 0-86.96-23.216C528.8 43.397 438.71 26.5 360 26.5c-78.711 0-168.801 16.897-239.177 33.778a1778.72 1778.72 0 0 0-86.96 23.216A1405.413 1405.413 0 0 0 8.72 91.146a864.836 864.836 0 0 0-8.447 2.71l-.274.09v2.107l.166-.055.111-.037.029-.009.007-.002S.315 95.949 0 95c.315.949.317.948.317.948l.007-.002.137-.046.437-.144.478-.156c.338-.11.754-.247 1.248-.407a864.594 864.594 0 0 1 6.698-2.14 1404.557 1404.557 0 0 1 25.106-7.64 1776.958 1776.958 0 0 1 86.861-23.19C191.617 45.352 281.527 28.5 360 28.5c78.472 0 168.382 16.853 238.71 33.722a1777.138 1777.138 0 0 1 86.861 23.19 1404.185 1404.185 0 0 1 25.106 7.641 856.118 856.118 0 0 1 8.424 2.703l.437.144.137.046.007.002s.002 0 .318-.948c-.316.949-.314.95-.314.95l.007.002.029.01.111.036.441.146a412.648 412.648 0 0 0 1.733.565c1.526.495 3.785 1.221 6.713 2.145a1403.02 1403.02 0 0 0 25.143 7.652 1778.488 1778.488 0 0 0 86.96 23.216C911.199 146.603 1001.29 163.5 1080 163.5c78.71 0 168.8-16.897 239.18-33.778a1782.519 1782.519 0 0 0 86.96-23.216c10.74-3.166 19.28-5.804 25.14-7.652a766.601 766.601 0 0 0 8.45-2.71l.27-.09v-2.107z'/%3E%3C/svg%3E%0A&quot;);"></div>
-    </div>
-    <div class="relative max-w-5xl mx-auto">
-      <div class="flex flex-col min-h-screen lg:flex-row lg:items-center lg:p-8">
-        <div class="flex flex-col flex-grow bg-white lg:shadow-2xl lg:rounded-lg lg:overflow-hidden">
-          <div class="flex-grow flex flex-col justify-center p-12">
-            <div class="flex items-center">
-              <svg class="h-10 sm:h-12" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M30 14c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C33.744 27.09 36.808 30.2 43.5 30.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.514-3.522-2.004-5.147-3.653C39.756 17.11 36.692 14 30 14zM16.5 30.2C9.3 30.2 4.8 33.8 3 41c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C20.244 43.29 23.308 46.4 30 46.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.514-3.522-2.004-5.147-3.653C26.256 33.31 23.192 30.2 16.5 30.2z" fill="url(#logo-gradient)"/>
-                <defs>
-                  <linearGradient id="logo-gradient" x1="1.5" y1="14" x2="57" y2="46" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#2298BD"/>
-                    <stop offset="1" stop-color="#0ED7B5"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <svg class="h-10 ml-4" viewBox="0 0 196 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="fill-current text-gray-800" clip-rule="evenodd" d="M13.996 28.652H9.284v9.12c0 2.432 1.596 2.394 4.712 2.242V43.7c-6.308.76-8.816-.988-8.816-5.928v-9.12H1.684V24.7H5.18v-5.104l4.104-1.216v6.32h4.712v3.952zM31.958 24.7h4.104v19h-4.104v-2.736c-1.444 2.014-3.686 3.23-6.65 3.23-5.168 0-9.462-4.37-9.462-9.994 0-5.662 4.294-9.994 9.462-9.994 2.964 0 5.206 1.216 6.65 3.192V24.7zm-6.004 15.58c3.42 0 6.004-2.546 6.004-6.08 0-3.534-2.584-6.08-6.004-6.08-3.42 0-6.004 2.546-6.004 6.08 0 3.534 2.584 6.08 6.004 6.08zm16.948-18.43c-1.444 0-2.622-1.216-2.622-2.622a2.627 2.627 0 0 1 2.622-2.622 2.627 2.627 0 0 1 2.622 2.622c0 1.406-1.178 2.622-2.622 2.622zM40.85 43.7v-19h4.104v19H40.85zm8.854 0V15.96h4.104V43.7h-4.104zm30.742-19h4.332l-5.966 19h-4.028l-3.952-12.806-3.99 12.806h-4.028l-5.966-19h4.332l3.686 13.11 3.99-13.11h3.914l3.952 13.11 3.724-13.11zm9.424-2.85c-1.444 0-2.622-1.216-2.622-2.622a2.627 2.627 0 0 1 2.622-2.622 2.627 2.627 0 0 1 2.622 2.622c0 1.406-1.178 2.622-2.622 2.622zM87.818 43.7v-19h4.104v19h-4.104zm18.848-19.494c4.256 0 7.296 2.888 7.296 7.828V43.7h-4.104V32.452c0-2.888-1.672-4.408-4.256-4.408-2.698 0-4.826 1.596-4.826 5.472V43.7h-4.104v-19h4.104v2.432c1.254-1.976 3.306-2.926 5.89-2.926zm26.752-7.106h4.104v26.6h-4.104v-2.736c-1.444 2.014-3.686 3.23-6.65 3.23-5.168 0-9.462-4.37-9.462-9.994 0-5.662 4.294-9.994 9.462-9.994 2.964 0 5.206 1.216 6.65 3.192V17.1zm-6.004 23.18c3.42 0 6.004-2.546 6.004-6.08 0-3.534-2.584-6.08-6.004-6.08-3.42 0-6.004 2.546-6.004 6.08 0 3.534 2.584 6.08 6.004 6.08zm23.864 3.914c-5.738 0-10.032-4.37-10.032-9.994 0-5.662 4.294-9.994 10.032-9.994 3.724 0 6.954 1.938 8.474 4.902l-3.534 2.052c-.836-1.786-2.698-2.926-4.978-2.926-3.344 0-5.89 2.546-5.89 5.966 0 3.42 2.546 5.966 5.89 5.966 2.28 0 4.142-1.178 5.054-2.926l3.534 2.014c-1.596 3.002-4.826 4.94-8.55 4.94zm15.314-14.25c0 3.458 10.222 1.368 10.222 8.398 0 3.8-3.306 5.852-7.41 5.852-3.8 0-6.536-1.71-7.752-4.446l3.534-2.052c.608 1.71 2.128 2.736 4.218 2.736 1.824 0 3.23-.608 3.23-2.128 0-3.382-10.222-1.482-10.222-8.284 0-3.572 3.078-5.814 6.954-5.814 3.116 0 5.7 1.444 7.03 3.952l-3.458 1.938c-.684-1.482-2.014-2.166-3.572-2.166-1.482 0-2.774.646-2.774 2.014zm17.518 0c0 3.458 10.222 1.368 10.222 8.398 0 3.8-3.306 5.852-7.41 5.852-3.8 0-6.536-1.71-7.752-4.446l3.534-2.052c.608 1.71 2.128 2.736 4.218 2.736 1.824 0 3.23-.608 3.23-2.128 0-3.382-10.222-1.482-10.222-8.284 0-3.572 3.078-5.814 6.954-5.814 3.116 0 5.7 1.444 7.03 3.952l-3.458 1.938c-.684-1.482-2.014-2.166-3.572-2.166-1.482 0-2.774.646-2.774 2.014z"/>
-              </svg>
+
+<body class="antialiased text-gray-800">
+    <header style="background-image: url('airbnb-home.jpg');" class="relative bg-cover lg:bg-center p-6 bg-right-top">
+        <a href="/">
+            <h1>
+                <span class="sr-only">AirBnb</span>
+                <svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false" style="height: 32px; width: 32px; display: block; fill: #ffffff;">
+            <title>AirBnb</title>
+            <path
+              d="m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z"
+            ></path>
+          </svg>
+            </h1>
+        </a>
+        <div class="max-w-5xl mx-auto lg:py-32 py-2">
+            <h2 class="lg:text-5xl text-4xl font-semibold text-white leading-none mb-4">Book a trip. Host travels. All on Airbnb.</h2>
+            <div class="flex items-center flex-wrap justify-start max-w-2xl lg:mx-0 mx-auto">
+                <div class="lg:pr-5 w-full lg:w-1/2 mb-4 lg:mb-0">
+                    <p class="text-white mb-2 tracking-wide">Find places to stay and things to do</p>
+                    <a href="#" class="transition bg-white px-10 py-3 rounded font-bold hover:bg-gray-300 block w-full text-center border-2 border-white">Explore</a>
+                </div>
+                <div class="lg:pl-5 w-full lg:w-1/2">
+                    <p class="text-white mb-2 tracking-wide">Earn money from your extra space</p>
+                    <a href="#" class="transition border-2 border-white bg-transparent px-10 py-3 rounded text-white font-bold hover:bg-gray-800 block w-full text-center">Host</a>
+                </div>
             </div>
-            <div class="md:pl-16 pl-0">
-              <h1 class="sm:font-light text-2xl sm:text-3xl md:text-4xl text-gray-900 mt-6">Welcome to your first Tailwind project!</h1>
-              <p class="sm:text-xl text-gray-600 mt-3 leading-relaxed">The file you're looking at is the <span class="font-mono bg-gray-200 text-sm sm:text-base text-gray-700 subpixel-antialiased px-1 rounded">index.html</span> file in the repository you just cloned. If you used <span class="font-mono bg-gray-200 text-sm sm:text-base text-gray-700 subpixel-antialiased px-1 rounded">npm run serve</span> to view this page, try editing that file to see this page automatically update with your changes.</p>
-            </div>
-          </div>
-          <div class="bg-gray-100 border-t-2 border-gray-200">
-            <div class="flex flex-wrap">
-              <div class="flex flex-col px-12 py-10 w-full sm:w-1/2 sm:border-r sm:border-b border-gray-200">
-                <div class="flex flex-grow">
-                  <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 md:h-10 md:w-10 md:-my-1">
-                      <g>
-                        <path class="fill-current text-gray-400" d="M12 21a2 2 0 0 1-1.41-.59l-.83-.82A2 2 0 0 0 8.34 19H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4a5 5 0 0 1 4 2v16z" />
-                        <path class="fill-current text-gray-700" d="M12 21V5a5 5 0 0 1 4-2h4a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-4.34a2 2 0 0 0-1.42.59l-.83.82A2 2 0 0 1 12 21z" />
-                      </g>
-                    </svg>
-                  </div>
-                  <div class="leading-relaxed flex flex-col ml-4 md:ml-6">
-                    <h2 class="font-medium text-gray-800 text-lg">Documentation</h2>
-                    <p class="text-gray-600 mt-1 text-sm md:text-base">Get familiar with Tailwind’s utility-first approach and start building awesome stuff.</p>
-                    <div class="pt-1 mt-auto">
-                      <a class="inline-flex items-center text-teal-600 hover:text-teal-800" href="https://tailwindcss.com/docs">
-                        <span class="text-sm md:text-base font-semibold">Explore the docs</span>
-                        <svg class="fill-current w-4 h-4 ml-2" viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5858 7H1C0.447715 7 0 6.55228 0 6C0 5.44772 0.447715 5 1 5H14.5858L11.2929 1.70711C10.9024 1.31658 10.9024 0.683418 11.2929 0.292893C11.6834 -0.0976311 12.3166 -0.0976311 12.7071 0.292893L17.7071 5.29289C18.0976 5.68342 18.0976 6.31658 17.7071 6.70711L12.7071 11.7071C12.3166 12.0976 11.6834 12.0976 11.2929 11.7071C10.9024 11.3166 10.9024 10.6834 11.2929 10.2929L14.5858 7Z"></path>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col px-12 py-10 w-full sm:w-1/2 border-t-2 sm:border-t-0 sm:border-l sm:border-b border-gray-200">
-                <div class="flex flex-grow">
-                  <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 md:h-10 md:w-10 md:-my-1">
-                      <path class="fill-current text-gray-400" d="M3 6l9 4v12l-9-4V6zm14-3v2c0 1.1-2.24 2-5 2s-5-.9-5-2V3c0 1.1 2.24 2 5 2s5-.9 5-2z" />
-                      <polygon class="fill-current text-gray-700" points="21 6 12 10 12 22 21 18" />
-                    </svg>
-                  </div>
-                  <div class="flex flex-col leading-relaxed ml-4 md:ml-6">
-                    <h2 class="font-medium text-gray-800 text-lg">Component Examples</h2>
-                    <p class="text-gray-600 mt-1 text-sm md:text-base">Browse pre-built components using Tailwind’s utility classes. </p>
-                    <div class="pt-1 mt-auto">
-                      <a class="inline-flex items-center text-teal-600 hover:text-teal-800" href="https://tailwindcss.com/components">
-                        <span class="text-sm md:text-base font-semibold">Browse examples</span>
-                        <svg class="fill-current w-4 h-4 ml-2" viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5858 7H1C0.447715 7 0 6.55228 0 6C0 5.44772 0.447715 5 1 5H14.5858L11.2929 1.70711C10.9024 1.31658 10.9024 0.683418 11.2929 0.292893C11.6834 -0.0976311 12.3166 -0.0976311 12.7071 0.292893L17.7071 5.29289C18.0976 5.68342 18.0976 6.31658 17.7071 6.70711L12.7071 11.7071C12.3166 12.0976 11.6834 12.0976 11.2929 11.7071C10.9024 11.3166 10.9024 10.6834 11.2929 10.2929L14.5858 7Z"></path>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col px-12 py-10 w-full sm:w-1/2 border-t-2 sm:border-r sm:border-t border-gray-200">
-                <div class="flex flex-grow">
-                  <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 md:h-10 md:w-10 md:-my-1">
-                      <path class="fill-current text-gray-400" d="M9 22c.19-.14.37-.3.54-.46L17.07 14H20a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H9zM4 2h4a2 2 0 0 1 2 2v14a4 4 0 1 1-8 0V4c0-1.1.9-2 2-2zm2 17.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-                      <path class="fill-current text-gray-700" d="M11 18.66V7.34l2.07-2.07a2 2 0 0 1 2.83 0l2.83 2.83a2 2 0 0 1 0 2.83L11 18.66z" />
-                    </svg>
-                  </div>
-                  <div class="flex flex-col leading-relaxed ml-4 md:ml-6">
-                    <h2 class="font-medium text-gray-800 text-lg">Resources</h2>
-                    <p class="text-gray-600 mt-1 text-sm md:text-base">A collection of assets and resources to help supercharge your Tailwind workflow.</p>
-                    <div class="pt-1 mt-auto">
-                      <a class="inline-flex items-center text-teal-600 hover:text-teal-800" href="https://tailwindcss.com/resources">
-                        <span class="text-sm md:text-base font-semibold">Find resources</span>
-                        <svg class="fill-current w-4 h-4 ml-2" viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5858 7H1C0.447715 7 0 6.55228 0 6C0 5.44772 0.447715 5 1 5H14.5858L11.2929 1.70711C10.9024 1.31658 10.9024 0.683418 11.2929 0.292893C11.6834 -0.0976311 12.3166 -0.0976311 12.7071 0.292893L17.7071 5.29289C18.0976 5.68342 18.0976 6.31658 17.7071 6.70711L12.7071 11.7071C12.3166 12.0976 11.6834 12.0976 11.2929 11.7071C10.9024 11.3166 10.9024 10.6834 11.2929 10.2929L14.5858 7Z"></path>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="flex flex-col px-12 py-10 w-full sm:w-1/2 border-t-2 sm:border-l sm:border-t border-gray-200">
-                <div class="flex flex-grow">
-                  <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8 md:h-10 md:w-10 md:-my-1">
-                      <path class="fill-current text-gray-400" d="M20.3 12.04l1.01 3a1 1 0 0 1-1.26 1.27l-3.01-1a7 7 0 1 1 3.27-3.27zM11 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-                      <path class="fill-current text-gray-700" d="M15.88 17.8a7 7 0 0 1-8.92 2.5l-3 1.01a1 1 0 0 1-1.27-1.26l1-3.01A6.97 6.97 0 0 1 5 9.1a9 9 0 0 0 10.88 8.7z" />
-                    </svg>
-                  </div>
-                  <div class="flex flex-col leading-relaxed ml-4 md:ml-6">
-                    <h2 class="font-medium text-gray-800 text-lg">Community</h2>
-                    <p class="text-gray-600 mt-1 text-sm md:text-base">Connect and learn from other Tailwind users in the community.</p>
-                    <div class="pt-1 mt-auto">
-                      <a class="inline-flex items-center text-teal-600 hover:text-teal-800" href="https://tailwindcss.com/community">
-                        <span class="text-sm md:text-base font-semibold">Connect</span>
-                        <svg class="fill-current w-4 h-4 ml-2" viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5858 7H1C0.447715 7 0 6.55228 0 6C0 5.44772 0.447715 5 1 5H14.5858L11.2929 1.70711C10.9024 1.31658 10.9024 0.683418 11.2929 0.292893C11.6834 -0.0976311 12.3166 -0.0976311 12.7071 0.292893L17.7071 5.29289C18.0976 5.68342 18.0976 6.31658 17.7071 6.70711L12.7071 11.7071C12.3166 12.0976 11.6834 12.0976 11.2929 11.7071C10.9024 11.3166 10.9024 10.6834 11.2929 10.2929L14.5858 7Z"></path>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+    </header>
+
+    <div class="max-w-5xl mx-auto lg:py-16 py-12 lg:px-0 px-4">
+
+        <h3 class="font-bold bold text-2xl mb-4 leading-none">Book unique homes and experiences</h3>
+
+        <form action="#" class="lg:mb-16 mb-10">
+
+            <div class="flex items-start justify-start flex-wrap">
+                <div class="lg:w-1/3 w-full lg:pr-2 mb-4 lg:mb-0">
+                    <label for="where" class="label">Where</label>
+                    <input type="text" class="input" id="where" placeholder="Anywhere" />
+                </div>
+                <div class="lg:w-1/3 w-full lg:px-2 mb-4 lg:mb-0">
+                    <label for="checkin_checkout" class="label">Check-in - Checkout</label>
+                    <input type="text" class="input" id="checkin_checkout" placeholder="mm/dd/yyyy - mm/dd/yyyy" />
+                </div>
+                <div class="lg:w-1/3 w-full lg:pl-2">
+                    <label for="guests" class="label">Guests</label>
+                    <div class="relative">
+                        <select id="guests" class="input select">
+                <option value="1" selected>1 guest</option>
+                <option value="2" selected>2 guests</option>
+                <option value="3" selected>3 guests</option>
+              </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"><svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <h3 class="font-bold bold text-2xl lg:mb-2 mb-4 leading-none">What guests are saying about homes in the United States</h3>
+
+        <div class="flex lg:items-center items-start">
+            <svg class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style="height:24px;width:24px;fill:#FFB400"><path d="m21.95 9.48a.84.84 0 0 0 -.87-.48h-4.62a.5.5 0 0 0 0 1l4.14.01-4.81 4.17a.5.5 0 0 0 -.14.57l2.65 6.38-6.07-3.72a.5.5 0 0 0 -.52 0l-6.08 3.72 2.65-6.37a.5.5 0 0 0 -.13-.57l-4.75-4.18h5.75a.5.5 0 0 0 .46-.3l2.37-5.37 1.58 3.57a.5.5 0 0 0 .91-.41l-1.72-3.88a.8.8 0 0 0 -1.56-.01l-2.38 5.39h-5.9a.83.83 0 0 0 -.87.48.85.85 0 0 0 .32.96l4.85 4.25-2.78 6.67a.81.81 0 0 0 .16.98.66.66 0 0 0 .43.15 1.1 1.1 0 0 0 .56-.18l6.37-3.91 6.38 3.92a.81.81 0 0 0 .99.03c.15-.12.37-.41.15-1l-2.77-6.66 4.92-4.26a.84.84 0 0 0 .31-.95zm-.78.53h-.01" fill="#484848"></path><path d="m11 21.5a.5.5 0 1 1 -.5-.5.5.5 0 0 1 .5.5zm-3.5-15.5a.5.5 0 1 0 .5.5.5.5 0 0 0 -.5-.5zm15 10h-.5v-.5a.5.5 0 0 0 -1 0v .5h-.5a.5.5 0 0 0 0 1h .5v.5a.5.5 0 0 0 1 0v-.5h.5a.5.5 0 0 0 0-1zm-15-13h-.5v-.5a.5.5 0 0 0 -1 0v .5h-.5a.5.5 0 0 0 0 1h .5v.5a.5.5 0 0 0 1 0v-.5h.5a.5.5 0 0 0 0-1zm10.22 7.54a.84.84 0 0 0 -.17-.02q-.28-.01-3.19 0a .6.6 0 0 1 -.55-.35l-1.5-3.23a.42.42 0 0 0 -.75 0l-1.81 4.14a2.92 2.92 0 0 0 4.12 3.72l.46-.26 3.49-2.99.16-.18a.5.5 0 0 0 -.26-.82z"></path></svg>
+            <p class="pl-2">United States homes were <strong>rated 4.8 out of 5 stars</strong> with <strong>42,500,000+ reviews</strong></p>
+        </div>
+
+        <section class="flex items-start flex-wrap justify-between lg:my-10 my-6">
+
+            <!-- Card 1 -->
+            <article class="lg:w-1/3 w-full lg:pr-4 lg:mb-0 mb-6">
+                <img class="object-cover rounded w-full" src="1.jpg" />
+                <div class="my-3 flex justify-start items-center">
+                    <svg class="fill-current w-4 h-4 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-4 h-4 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-4 h-4 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-4 h-4 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-4 h-4 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                </div>
+
+                <p class="text-gray-700 font-light text-sm leading-snug">What a wonderful little cottage! More spacious and adorable than the pictures show. We never met our hosts, but we felt welcomed and... </p>
+
+                <div class="flex items-center justify-start my-4">
+                    <img src="jeff.jpg" class="w-12 h-12 rounded-full flex-shrink-0" />
+                    <div class="flex-1 pl-4 text-sm">
+                        <p class="font-semibold leading-none">Jeff</p>
+                        <p>United States</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="lg:w-1/3 w-full lg:px-2 lg:mb-0 mb-6">
+                <img class="object-cover rounded w-full" src="2.jpg" />
+                <div class="my-3 flex justify-start items-center">
+                    <svg class="fill-current w-4 h-4 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-4 h-4 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-4 h-4 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-4 h-4 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-4 h-4 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                </div>
+
+                <p class="text-gray-700 font-light text-sm leading-snug">What a wonderful little cottage! More spacious and adorable than the pictures show. We never met our hosts, but we felt welcomed and... </p>
+
+                <div class="flex items-center justify-start my-4">
+                    <img src="lesley.jpg" class="w-12 h-12 rounded-full flex-shrink-0" />
+                    <div class="flex-1 pl-4 text-sm">
+                        <p class="font-semibold leading-none">Lesley</p>
+                        <p>United Kingdom</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="lg:w-1/3 w-full lg:pl-4 lg:mb-0 mb-6">
+                <img class="object-cover rounded w-full" src="3.jpg" />
+                <div class="my-3 flex justify-start items-center">
+                    <svg class="fill-current w-4 h-4 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-4 h-4 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-4 h-4 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-4 h-4 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-4 h-4 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                </div>
+
+                <p class="text-gray-700 font-light text-sm leading-snug">What a wonderful little cottage! More spacious and adorable than the pictures show. We never met our hosts, but we felt welcomed and... </p>
+
+                <div class="flex items-center justify-start my-4">
+                    <img src="denise.jpg" class="w-12 h-12 rounded-full flex-shrink-0" />
+                    <div class="flex-1 pl-4 text-sm">
+                        <p class="font-semibold leading-none">Denise</p>
+                        <p>United States</p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <h3 class="font-bold bold text-2xl lg:mb-2 mb-4 leading-none pb-4 border-b border-gray-300">Traveling with AirBnb</h3>
+        <section class="flex items-start flex-wrap justify-between lg:my-8 my-6 border-b border-gray-300 pb-8">
+            <div class="lg:w-1/3 w-full lg:pr-4 lg:mb-0 mb-6">
+                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="#60B6B5" fill-opacity="0" stroke="#60B6B5" stroke-width="1" focusable="false" aria-hidden="true" role="presentation" stroke-linecap="round" stroke-linejoin="round"><path d="m17.5 2.9c-2.1 0-4.1 1.3-5.4 2.8-1.6-1.6-3.8-3.2-6.2-2.7-1.5.2-2.9 1.2-3.6 2.6-2.3 4.1 1 8.3 3.9 11.1 1.4 1.3 2.8 2.5 4.3 3.6.4.3 1.1.9 1.6.9s1.2-.6 1.6-.9c3.2-2.3 6.6-5.1 8.2-8.8 1.5-3.4 0-8.6-4.4-8.6" stroke-linejoin="round"></path></svg>
+                <p class="font-bold mt-3 mb-1">24/7 customer support</p>
+                <p class="text-gray-700 font-light text-sm leading-snug">Day or night, we’re here for you. Talk to our support team from anywhere in the world, any hour of day.</p>
+            </div>
+
+            <div class="lg:w-1/3 w-full lg:px-2 lg:mb-0 mb-6">
+                <svg class="w-8 h-8" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" fill="#60B6B5"><path d="m23.57 11.4-1.75-1.76-3.85-3.87-1.78-1.79-2.7-2.71-.82-.83-.22-.23-.06-.06c-.22-.22-.53-.22-.73-.02l-1.75 1.76-3.85 3.87-3.85 3.87-1.75 1.76a1.49 1.49 0 0 0 -.44 1.05v.01c0 .38.15.77.44 1.06l.55.55a1.49 1.49 0 0 0 2.01.08v8.4c0 .81.68 1.45 1.5 1.45h15c .82 0 1.5-.65 1.5-1.45v-8.4c.59.49 1.45.47 2.01-.08l.55-.55c.29-.29.44-.68.44-1.06v-.01c0-.38-.14-.77-.44-1.06zm-3.57 11.16c0 .24-.22.45-.5.45h-15c-.28 0-.5-.21-.5-.45v-9.36l8-7.99 8 7.99zm2.85-9.74-.55.55c-.2.2-.52.2-.71.01l-9.24-9.22a.5.5 0 0 0 -.71 0l-9.24 9.22a.5.5 0 0 1 -.71-.01l-.55-.55a.5.5 0 0 1 -.01-.71l1.75-1.76 3.85-3.87 3.85-3.87 1.4-1.4.77.77 2.7 2.71 1.78 1.79 3.85 3.87 1.75 1.76a.51.51 0 0 1 -.01.71z" fill-rule="evenodd"></path></svg>
+                <p class="font-bold mt-3 mb-1">Global hospitality standards</p>
+                <p class="text-gray-700 font-light text-sm leading-snug">Guests review their hosts after each stay. All hosts must maintain a minimum rating and our hospitality standards to be on Airbnb.</p>
+            </div>
+            <div class="lg:w-1/3 w-full lg:pl-4">
+                <svg class="w-8 h-8" viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" fill="#60B6B5"><path d="m15.37 13.54-.01.01a.53.53 0 0 0 .01-.01m-.37 9.46h-11.5c-.28 0-.9-.22-1.38-.58-.71-.52-1.12-1.31-1.12-2.42 0-.04 0-.07.01-.11.09-1.1 1.59-2.44 4.02-3.79a33.14 33.14 0 0 1 2.9-1.42 35.57 35.57 0 0 1 1.31-.54c.63-.26.71-.95.18-1.35a4.55 4.55 0 0 1 -.38-.31 7.1 7.1 0 0 1 -.84-.9c-.73-.92-1.17-1.96-1.2-3.09v-2.99c.07-2.36 2.38-4.5 5.04-4.5 2.67 0 4.96 2.14 4.96 4.5v3c0 1.13-.43 2.17-1.15 3.11a7.35 7.35 0 0 1 -1.09 1.13l-.08.07c-.02.02-.02.02-.05.05s-.03.03-.09.14c-.05.47-.05.47.46.7a.49.49 0 0 0 .36-.15l.06-.05a8.32 8.32 0 0 0 1.23-1.28c.84-1.1 1.35-2.35 1.35-3.72v-3c0-2.92-2.75-5.5-5.96-5.5-3.2 0-5.96 2.56-6.04 5.49v3.01c.03 1.38.56 2.62 1.42 3.71.31.39.63.73.96 1.03.06.05.1.08.15.12a34.28 34.28 0 0 0 -3.98 1.87c-2.73 1.51-4.41 3.02-4.54 4.58a2.41 2.41 0 0 0 -.01.19c0 2.55 1.91 3.99 3.5 4h11.5a.5.5 0 1 0 0-1m7.67-4.22c-.36.74-.97 1.55-1.78 2.38a20.33 20.33 0 0 1 -1.89 1.71 19.94 19.94 0 0 1 -1.89-1.71c-.81-.83-1.42-1.64-1.78-2.38-.22-.45-.33-.86-.33-1.23 0-.99.61-1.56 1.43-1.56.7 0 1.55.53 2.18 1.31a.5.5 0 0 0 .78 0c .63-.78 1.48-1.31 2.18-1.31.82 0 1.43.57 1.43 1.56 0 .36-.11.77-.33 1.23m-1.1-3.78c-.89 0-1.82.5-2.57 1.25-.75-.76-1.68-1.25-2.57-1.25-1.36 0-2.43 1.01-2.43 2.56 0 .53.15 1.08.43 1.66.41.85 1.09 1.74 1.96 2.64a21.09 21.09 0 0 0 2.31 2.05.5.5 0 0 0 .6 0 20.91 20.91 0 0 0 2.31-2.05c.87-.9 1.55-1.79 1.96-2.64.28-.58.43-1.13.43-1.66 0-1.55-1.07-2.56-2.43-2.56" fill-rule="evenodd"></path></svg>
+                <p class="font-bold mt-3 mb-1">5-star hosts</p>
+                <p class="text-gray-700 font-light text-sm leading-snug">From fresh-pressed sheets to tips on where to get the best brunch, our hosts are full of local hospitality.</p>
+            </div>
+        </section>
+
+        <h3 class="font-bold bold text-2xl lg:mb-2 mb-4 leading-none">Just booked in the United States</h3>
+
+        <section class="flex items-start flex-wrap justify-between lg:my-8 my-6">
+            <a href="#" class="lg:w-1/4 md:w-1/2 w-full lg:pr-2 md:pr-2 lg:mb-0 mb-6">
+                <img src="just-booked-1.jpg" class="object-cover w-full" />
+
+                <p class="uppercase text-gray-600 text-xs font-bold pt-2">Entire House <span aria-hidden="true">•</span> Joshua Tree</p>
+                <h4 class="font-medium my-1 text-lg leading-snug">The Joshua Tree House</h4>
+                <p class="text-gray-600 text-sm mb-1">$285/night</p>
+                <div class="flex items-center">
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <p class="text-xs text-gray-600">467 <span aria-hidden>•</span> Superhost</p>
+                </div>
+            </a>
+            <a href="#" class="lg:w-1/4 md:w-1/2 w-full lg:px-1 md:px-1 lg:mb-0 mb-6">
+                <img src="just-booked-2.jpg" class="object-cover w-full" />
+                <p class="uppercase text-gray-600 text-xs font-bold pt-2">Dome house <span aria-hidden="true">•</span> Aptos</p>
+                <h4 class="font-medium my-1 text-lg leading-snug">Mushroom Dome Cabin: #1 on airbnb in the world</h4>
+                <p class="text-gray-600 text-sm mb-1">$130/night</p>
+                <div class="flex items-center">
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <p class="text-xs text-gray-600">1392 <span aria-hidden>•</span> Superhost</p>
+                </div>
+            </a>
+            <a href="#" class="lg:w-1/4 md:w-1/2 w-full lg:px-1 md:px-1 lg:mb-0 mb-6">
+                <img src="just-booked-3.jpg" class="object-cover w-full" />
+                <p class="uppercase text-gray-600 text-xs font-bold pt-2 leading-snug">Earth house <span aria-hidden="true">•</span> Orondo</p>
+                <h4 class="font-medium my-1 text-lg">Underground Hygge</h4>
+                <p class="text-gray-600 text-sm mb-1">$150/night</p>
+                <div class="flex items-center">
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <p class="text-xs text-gray-600">552 <span aria-hidden>•</span> Superhost</p>
+                </div>
+            </a>
+            <a href="#" class="lg:w-1/4 md:w-1/2 w-full lg:pl-2 md:pl-2">
+                <img src="just-booked-4.jpg" class="object-cover w-full" />
+                <p class="uppercase text-gray-600 text-xs font-bold pt-2">Entire house <span aria-hidden="true">•</span> Pioneertown</p>
+                <h4 class="font-medium my-1 text-lg leading-snug">Off-grid itHouse</h4>
+                <p class="text-gray-600 text-sm mb-1">$450/night</p>
+                <div class="flex items-center">
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <svg class="fill-current w-2 h-2 text-cyan mr-1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M972 380c9 28 2 50-20 67L725 619l87 280c11 39-18 75-54 75-12 0-23-4-33-12L499 790 273 962a58 58 0 0 1-78-12 50 50 0 0 1-8-51l86-278L46 447c-21-17-28-39-19-67 8-24 29-40 52-40h280l87-279c7-23 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z"/></svg>
+                    <p class="text-xs text-gray-600">254</p>
+                </div>
+            </a>
+        </section>
+
+        <a href="#" class="text-cyan text-lg flex items-center font-medium">Show all (22,000+) <svg viewBox="0 0 18 18" role="presentation" aria-hidden="true" focusable="false" class="ml-2 relative w-3 h-3 fill-current text-cyan"><path d="m4.29 1.71a1 1 0 1 1 1.42-1.41l8 8a1 1 0 0 1 0 1.41l-8 8a1 1 0 1 1 -1.42-1.41l7.29-7.29z" fill-rule="evenodd"></path></svg></a>
+
+        <section class="lg:mt-16 mt-8">
+            <h3 class="font-bold bold text-2xl lg:mb-2 mb-4 leading-none">When are you traveling?</h3>
+            <p class="font-light">Add dates for updated pricing and availability</p>
+            <a href="#" class="bg-cyan px-6 py-3 rounded text-white font-bold inline-block my-2">Add dates</a>
+        </section>
     </div>
-  </div>
+
+    <footer class="bg-gray-100 border-t border-gray-300 py-10 text-sm">
+        <div class="max-w-5xl mx-auto pb-8 mb-6 border-b border-gray-300 px-4 lg:px-0">
+            <div class="flex flex-wrap items-start justify-start">
+                <div class="lg:w-1/4 w-full lg:mb-0 mb-6">
+                    <h5 class="font-semibold text-gray-700 mb-2">Airbnb</h5>
+                    <ul class="leading-loose">
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Careers</a></li>
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">News</a></li>
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Policies</a></li>
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Help</a></li>
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Diversity & Belonging</a></li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/4 w-full lg:mb-0 mb-6">
+                    <h5 class="font-semibold text-gray-700 mb-2">Discover</h5>
+                    <ul class="leading-loose">
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Trust &amp; Safety</a></li>
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Travel Credit</a></li>
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Gift Cards</a></li>
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Airbnb Citizen</a></li>
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Business Travel</a></li>
+                        <li class="flex">
+                            <a href="#" class="text-gray-600 hover:underline font-semibold">Things To Do</a>
+                            <span class="bg-cyan px-1 inline-flex items-center h-5 text-white rounded ml-1 mt-1 inline-block bg-black text-xs">New</span>
+                        </li>
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Airbnbmag</a></li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/4 w-full lg:mb-0 mb-6">
+                    <h5 class="font-semibold text-gray-700 mb-2">Hosting</h5>
+                    <ul class="leading-loose">
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Why Host</a></li>
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Hospitality</a></li>
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Responsible Hosting</a></li>
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Community Center</a></li>
+                        <li class="flex">
+                            <a class="text-gray-600 hover:underline font-semibold" href="#">Host an Experience</a>
+                            <span class="bg-cyan px-1 inline-flex items-center h-5 text-white rounded ml-1 mt-1 inline-block bg-black text-xs">New</span>
+                        </li>
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Open Homes</a></li>
+                        <li class="flex">
+                            <a href="#" class="text-gray-600 hover:underline font-semibold">Donations</a>
+                            <span class="bg-cyan px-1 inline-flex items-center h-5 text-white rounded ml-1 mt-1 inline-block bg-black text-xs">New</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/4 w-full">
+                    <div class="flex items-baseline justify-start mb-2">
+                        <a href="#" class="mr-2">
+                            <svg viewBox="0 0 32 32" role="img" aria-label="Navigate to Facebook" focusable="false" class="text-gray-600 fill-current w-4 h-4"><path d="m8 14.41v-4.17c0-.42.35-.81.77-.81h2.52v-2.08c0-4.84 2.48-7.31 7.42-7.35 1.65 0 3.22.21 4.69.64.46.14.63.42.6.88l-.56 4.06c-.04.18-.14.35-.32.53-.21.11-.42.18-.63.14-.88-.25-1.78-.35-2.8-.35-1.4 0-1.61.28-1.61 1.73v1.8h4.52c.42 0 .81.42.81.88l-.35 4.17c0 .42-.35.71-.77.71h-4.21v16c0 .42-.35.81-.77.81h-5.21c-.42 0-.8-.39-.8-.81v-16h-2.52a.78.78 0 0 1 -.78-.78" fill-rule="evenodd"></path></svg></a>
+
+                        <a href="#" class="mr-2">
+                            <svg class="text-gray-600 fill-current w-4 h-4" viewBox="0 0 32 32" role="img" aria-label="Navigate to Twitter" focusable="false"><path d="m31 6.36c-1.16.49-2.32.82-3.55.95 1.29-.76 2.22-1.87 2.72-3.38a13.05 13.05 0 0 1 -3.91 1.51c-1.23-1.28-2.75-1.94-4.51-1.94-3.41 0-6.17 2.73-6.17 6.12 0 .49.07.95.17 1.38-4.94-.23-9.51-2.6-12.66-6.38-.56.95-.86 1.97-.86 3.09 0 2.07 1.03 3.91 2.75 5.06-1-.03-1.92-.3-2.82-.76v.07c0 2.89 2.12 5.42 4.94 5.98-.63.17-1.16.23-1.62.23-.3 0-.7-.03-1.13-.13a6.07 6.07 0 0 0 5.74 4.24c-2.22 1.74-4.78 2.63-7.66 2.63-.56 0-1.06-.03-1.43-.1 2.85 1.84 6 2.76 9.41 2.76 7.29 0 12.83-4.01 15.51-9.3 1.36-2.66 2.02-5.36 2.02-8.09v-.46c-.03-.17-.03-.3-.03-.33a12.66 12.66 0 0 0 3.09-3.16" fill-rule="evenodd"></path></svg>
+                        </a>
+
+                        <a href="#">
+                            <svg viewBox="0 0 24 24" role="img" aria-label="Navigate to Instagram" focusable="false" class="text-gray-600 fill-current w-4 h-4"><path d="m23.09.91c-.61-.61-1.33-.91-2.17-.91h-17.84c-.85 0-1.57.3-2.17.91s-.91 1.33-.91 2.17v17.84c0 .85.3 1.57.91 2.17s1.33.91 2.17.91h17.84c.85 0 1.57-.3 2.17-.91s.91-1.33.91-2.17v-17.84c0-.85-.3-1.57-.91-2.17zm-14.48 7.74c.94-.91 2.08-1.37 3.4-1.37 1.33 0 2.47.46 3.41 1.37s1.41 2.01 1.41 3.3-.47 2.39-1.41 3.3-2.08 1.37-3.41 1.37c-1.32 0-2.46-.46-3.4-1.37s-1.41-2.01-1.41-3.3.47-2.39 1.41-3.3zm12.66 11.63c0 .27-.09.5-.28.68a.92.92 0 0 1 -.67.28h-16.7a.93.93 0 0 1 -.68-.28.92.92 0 0 1 -.27-.68v-10.13h2.2a6.74 6.74 0 0 0 -.31 2.05c0 2 .73 3.71 2.19 5.12s3.21 2.12 5.27 2.12a7.5 7.5 0 0 0 3.75-.97 7.29 7.29 0 0 0 2.72-2.63 6.93 6.93 0 0 0 1-3.63c0-.71-.11-1.39-.31-2.05h2.11v10.12zm0-13.95c0 .3-.11.56-.31.77a1.05 1.05 0 0 1 -.77.31h-2.72c-.3 0-.56-.11-.77-.31a1.05 1.05 0 0 1 -.31-.77v-2.58c0-.29.11-.54.31-.76s.47-.32.77-.32h2.72c.3 0 .56.11.77.32s.31.47.31.76z" fill-rule="evenodd"></path></svg>
+                        </a>
+                    </div>
+
+                    <ul class="leading-relaxed">
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Terms</a></li>
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Privacy</a></li>
+                        <li><a class="text-gray-600 hover:underline font-semibold" href="#">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-5xl mx-auto flex items-center px-4 lg:px-0">
+            <svg class="fill-current text-gray-600 w-5 h-5 flex-shrink-0" viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false"><path d="m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z"></path></svg>
+            <p class="text-gray-600 text-sm pl-2">&copy; 2019 Airbnb, Inc. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
+
 </html>
